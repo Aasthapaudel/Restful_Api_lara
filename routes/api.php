@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\DummpyApi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Api\ApiController;
+use App\Models\User;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,3 +19,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::resource('api',ApiController::class);
+Route::get('data',[DummpyApi::class,'getData']);
