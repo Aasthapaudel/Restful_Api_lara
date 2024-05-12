@@ -22,4 +22,16 @@ class DeviceController extends Controller
        }
         return ["Result"=>"Data has not been saved"];
     }
+    function updatedata(Request $request,$id){
+        $device = Device::findOrFail($id);
+        $device->name=$request->name;
+        $success=$device->save();
+        if($success)
+        {
+            return ["Result"=>"Update successfully"];
+        }
+        return ["Result"=>"Update Error"];
+
+
+    }
 }
