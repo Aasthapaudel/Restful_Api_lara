@@ -8,7 +8,7 @@ use App\Models\Device;
 class DeviceController extends Controller
 {
     //
-    function devicedata(){
-        return Device::all();
+    function devicedata($id){
+        return Device::find($id);
     }
 }

@@ -23,4 +23,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::resource('api',ApiController::class);
 Route::get('data',[DummpyApi::class,'getData']);
-Route::get('device',[DeviceController::class,'devicedata']);
+Route::get('device/{id}',[DeviceController::class,'devicedata']);
