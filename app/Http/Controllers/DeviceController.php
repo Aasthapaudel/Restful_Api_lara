@@ -38,4 +38,14 @@ class DeviceController extends Controller
         // return Device::where('name',$name)->get();//get name by saerching whole name
         return Device::where('name',"like","%".$name. "%")->get();
     }
+    function deletedata($id){
+        $device =Device::find($id);
+$result=$device->delete();
+        if($result){
+
+            return ["result"=>"delete successfully"];
+        }
+        return ["result"=>"delete error"];
+
+    }
 }
