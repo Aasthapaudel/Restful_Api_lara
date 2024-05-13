@@ -26,3 +26,4 @@ Route::get('data',[DummpyApi::class,'getData']);
 Route::get('device/{id?}',[DeviceController::class,'devicedata']);
 Route::post('add',[DeviceController::class,'adddata']);
 Route::put('update/{id}',[DeviceController::class,'updatedata']);
+Route::get('search/{name}',[DeviceController::class,'searchdata']);

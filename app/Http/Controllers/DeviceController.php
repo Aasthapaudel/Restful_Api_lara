@@ -34,4 +34,8 @@ class DeviceController extends Controller
 
 
     }
+    function searchdata($name){
+        // return Device::where('name',$name)->get();//get name by saerching whole name
+        return Device::where('name',"like","%".$name. "%")->get();
+    }
 }
