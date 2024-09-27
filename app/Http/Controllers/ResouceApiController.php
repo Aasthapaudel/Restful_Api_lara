@@ -15,6 +15,7 @@ class ResouceApiController extends Controller
     {
         //
         return ["succesfilly called using resource controller"];
+        
     }
 
     /**

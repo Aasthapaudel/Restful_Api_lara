@@ -4,6 +4,7 @@ use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\ResouceApiController;
 use App\Http\Controllers\DummpyApi;
 use App\Http\Controllers\ValidController;
+use App\Http\Controllers\FileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ApiController;
@@ -32,6 +33,8 @@ Route::get('search/{name}',[DeviceController::class,'searchdata']);
 Route::delete('delete/{id}',[DeviceController::class,'deletedata']);
 
 });
+Route::post('upload',[FileController::class,'upload']);
+
 
 // Route::get('data',[DummpyApi::class,'getData']);
 // Route::get('device/{id?}',[DeviceController::class,'devicedata']);
